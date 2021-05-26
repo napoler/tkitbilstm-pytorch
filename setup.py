@@ -28,21 +28,21 @@ def read_requirements(filename):
 
 long_description=read_file("README.md")
 setup(
-    name='tkitDemo', #修改包名字-
-    version='0.0.0.2                                 ',
-    description='Terry toolkit tkitDemo',
+    name='tkitbilstm', #修改包名字-
+    version='0.0.0.1.2',
+    description='Terry toolkit tkitbilstm',
     author='Terry Chan',
     author_email='napoler2008@gmail.com',
-    url='http://www.terrychan.org/python_libs_demo/',
-    install_requires=read_requirements('requirements.txt'),  # 指定需要安装的依赖
+    url='https://github.com/napoler/tkitbilstm-pytorch',
+    # install_requires=read_requirements('requirements.txt'),  # 指定需要安装的依赖
     long_description=long_description,
     long_description_content_type="text/markdown",
-    # install_requires=[
-    #     # 'beautifulsoup4==4.7.1',
+    install_requires=[
+        'pytorch-lightning>=1.2.10',
 
 
-    # ],
-    packages=['Demo'])
+    ],
+    packages=['tkitbilstm'])
 
 """
 pip freeze > requirements.txt
@@ -50,4 +50,9 @@ pip freeze > requirements.txt
 python3 setup.py sdist
 #python3 setup.py install
 python3 setup.py sdist upload
+
+
+更详细的上传流程
+
+https://www.notion.so/terrychanorg/PyPi-pip-b371898f30ec4f268688edebab8d7ba1
 """
